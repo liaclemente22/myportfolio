@@ -1,0 +1,15 @@
+/* Targeting the larger card */
+.larger-card {
+  width: 80%; /* Adjust the width as per your preference */
+  max-width: 900px; /* Optional, set a maximum width */
+  margin: 20px auto; /* Center the card */
+  padding: 20px; /* Add padding inside the card */
+  border-radius: 10px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adding some shadow */
+  background-color: #fff; /* White background */
+  transition: transform 0.3s ease-in-out; /* Optional: smooth hover effect */
+}
+
+.larger-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+}

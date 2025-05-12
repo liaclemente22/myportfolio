@@ -1,0 +1,21 @@
+Blog.css.blog-content {
+  text-align: justify;       /* Aligns paragraphs nicely */
+  line-height: 1.8;          /* Increases readability */
+  font-size: 1.1rem;         /* Slightly larger text */
+  color: #333;               /* Dark gray for readability */
+  margin-top: 1.5rem;
+}
+
+.blog-content p {
+  margin-bottom: 1rem;
+}
+
+.blog-content ol,
+.blog-content ul {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+}

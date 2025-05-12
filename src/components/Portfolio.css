@@ -1,0 +1,51 @@
+/* Portfolio.css */
+.portfolio {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #222;
+  font-weight: 700; /* Bold heading */
+}
+
+p {
+  text-align: center;
+  color: #555; /* Darker gray for better readability */
+  font-weight: 400; /* Regular weight */
+}
+
+.skills {
+  margin-top: 20px;
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.skills h2 {
+  color: #333;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  background: #f4f4f4;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px
+}

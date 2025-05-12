@@ -1,0 +1,101 @@
+/* ITSupport.css */
+.it-support-container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.it-support-header {
+  text-align: center;
+}
+
+.it-support-header h1 {
+  font-size: 2rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.it-support-header p {
+  color: #666;
+}
+
+.it-support-header a {
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.it-support-header a:hover {
+  text-decoration: underline;
+}
+
+.it-support-skills {
+  margin-top: 30px;
+}
+
+.it-support-skills h2 {
+  font-size: 1.25rem;
+  color: #444;
+}
+
+.it-support-skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.it-support-skills li {
+  background: #f4f4f4;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.it-support-projects {
+  margin-top: 30px;
+}
+
+.it-support-projects h2 {
+  font-size: 1.25rem;
+  color: #444;
+}
+
+.project {
+  background: #eef;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.project a {
+  display: block;
+  color: #007bff;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+.it-support-resume {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.it-support-resume a {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.it-support-resume a:hover {
+  background-color: #0056b3;
+}
