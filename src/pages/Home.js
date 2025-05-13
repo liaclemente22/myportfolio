@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Home.css"; // Optional CSS for styling
+import "./Home.css"; 
 
 const Home = () => {
   return (
@@ -31,12 +31,12 @@ const Home = () => {
       </section>
 
       {/* Contact Section */}
-      <footer className="contact">
+      <section className="contact">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:liaalmidaclemente@gmail.com">liaalmidaclemente@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
-      </footer>
+        <p>Email: <a href="mailto:liaalmidaclemente@gmail.com" rel="noopener noreferrer" target="_blank">liaalmidaclemente@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/liaclemente22/" rel="noopener noreferrer" target="_blank">github.com/liaclemente22</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/lia-almida-clemente-116690142/" rel="noopener noreferrer" target="_blank">linkedin.com/in/lia-almida-clemente</a></p>
+      </section>
     </div>
   );
 };
