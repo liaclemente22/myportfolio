@@ -21,13 +21,13 @@ const RealEstate = () => {
       <section className="projects">
         <h2>Featured Properties</h2>
         <div className="project">
-          <h3>Avida Lifestyle Condo in Metro Manila</h3>
+          <h3>Residential Condo in Metro Manila</h3>
           <p>3-bed, 2-bath condo in a prime location. Modern amenities included.</p>
           <a href="" target="_blank">View Listing</a>
         </div>
 
         <div className="project">
-          <h3>Amaia Residential Condo Units</h3>
+          <h3>House and Lot Properties</h3>
           <p>Afforadable and quality property development by Avida.</p>
           <a href="" target="_blank">View Listing</a>
         </div>
@@ -37,7 +37,7 @@ const RealEstate = () => {
       <footer>
         <h2>Contact</h2>
         <p>Email: <a href="mailto:liaalmidaclemente@gmail.com">liaalmidaclemente@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/lia-almida-clemente-116690142/" target="_blank">linkedin.com/in/lia-almida-clemente-116690142/</a></p>
       </footer>
     </div>
   );

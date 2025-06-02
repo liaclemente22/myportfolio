@@ -23,15 +23,17 @@ const WebDev = () => {
       <section className="projects">
         <h2>Web Development Projects</h2>
         <div className="project">
-          <h3>IT Asset Management Dashboard</h3>
-          <p>A web-based tool for tracking IT assets and service tickets.</p>
-          <a href="https://yourdemo.com" target="_blank">View Demo</a>
+          <h3>Airline Web App</h3>
+          <p>Mabuhay Airlines is a full stack airline booking web application that allows users to search for flights, book tickets, apply promo fares, and manage bookings. The frontend is built with React.js and Bootstrap, while the backend uses Node.js, Express, and MongoDB. </p>
+          <p><em>Role:</em> Project Collaborator</p>
+          <a href="https://mabuhay-airlines-fs.vercel.app/" target="_blank">View Project</a>
         </div>
 
         <div className="project">
           <h3>E-Commerce Platform</h3>
-          <p>Backend Shopping with a secure checkout process.</p>
-          <a href="https://documenter.getpostman.com/view/39840072/2sB2cUB3MA" target="_blank">View Code</a>
+          <p>This is a full stack e-commerce web application developed as a capstone project during the Zuitt Coding Bootcamp. It features user authentication, product catalog browsing, cart management, and admin controls for product and order management. The frontend was built using HTML, CSS, and JavaScript, while the backend was developed using Node.js, Express, and MongoDB.</p>
+          <p><em>Role:</em> Backend Development Partner</p>
+          <a href="http://zuitt-bootcamp-prod-521-8370-clemente.s3-website.us-east-1.amazonaws.com/" target="_blank">View Project</a>
         </div>
       </section>
 
@@ -39,7 +41,7 @@ const WebDev = () => {
       <footer>
         <h2>Contact</h2>
         <p>Email: <a href="mailto:liaalmidaclemente@gmail.com">liaalmidaclemente@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a></p>
+        <p>GitHub: <a href="https://github.com/liaclemente22/" target="_blank">github.com/liaclemente22/</a></p>
       </footer>
     </div>
   );

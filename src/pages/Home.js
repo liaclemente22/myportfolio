@@ -17,8 +17,18 @@ const Home = () => {
           <Link to="/it-support" className="role-btn">IT Support Portfolio</Link>
           <Link to="/web-dev" className="role-btn">Web Developer Portfolio</Link>
           <Link to="/real-estate" className="role-btn">Real Estate Portfolio</Link>
+
         </div>
       </section>
+
+
+    <section className="other">
+      <h2>Other Work Explorations</h2>
+      <div className="role-buttons">
+       <a href="https://lifeandchances.com/" target="_blank" rel="noopener noreferrer" className="role-btn">WordPress Web Development Creation</a>
+       </div>
+      </section>
+
 
       {/* About Section */}
       <section className="about">
