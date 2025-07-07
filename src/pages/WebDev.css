@@ -1,0 +1,115 @@
+.webdev-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e0f0ff, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.webdev-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.webdev-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #212529;
+}
+
+.webdev-header p {
+  font-size: 1.2rem;
+  color: #495057;
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.webdev-skills,
+.webdev-projects,
+.webdev-resume {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.webdev-skills h2,
+.webdev-projects h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #212529;
+}
+
+.webdev-skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.webdev-skills li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+.project h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.project p {
+  color: #555;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 5px;
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.webdev-resume a {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #0d6efd;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+}
+
+.webdev-resume a:hover {
+  transform: scale(1.05);
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+
+.skills ul {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.skills li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}

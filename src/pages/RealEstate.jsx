@@ -1,45 +1,69 @@
-import "../components/Portfolio.css";
+import "./RealEstate.css";
+import { useNavigate } from "react-router-dom";
 
 const RealEstate = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="portfolio">
-      <h1>Real Estate Portfolio</h1>
-      <p>Experienced in property sales, rentals, and investment consulting.</p>
+    <section className="it-support-section position-relative">
 
-      {/* Skills Section */}
-      <section className="skills">
-        <h2>Real Estate Expertise</h2>
-        <ul>
-          <li>Residential & Commercial Sales</li>
-          <li>Investment Consulting</li>
-          <li>Sales and Marketing </li>
-          <li>Negotiation & Contracts</li>
-        </ul>
-      </section>
+      {/* Back Button - Top Left */}
+      <button 
+        className="btn btn-outline-secondary back-btn" 
+        onClick={() => navigate(-1)} >
+        ← Back
+      </button>
 
-      {/* Featured Properties */}
-      <section className="projects">
-        <h2>Featured Properties</h2>
-        <div className="project">
-          <h3>Residential Condo in Metro Manila</h3>
-          <p>3-bed, 2-bath condo in a prime location. Modern amenities included.</p>
-          <a href="" target="_blank">View Listing</a>
+      <div className="container text-center">
+        
+        {/* Header Section */}
+        <div className="header mb-5">
+          <h1 className="section-title">Real Estate Portfolio</h1>
+          <p className="lead">Real Estate Professional | Sales | Investment Consulting</p>
+          <a href="mailto:liaalmidaclemente@gmail.com" className="btn btn-outline-primary mt-3">Contact Me</a>
         </div>
 
-        <div className="project">
-          <h3>House and Lot Properties</h3>
-          <p>Afforadable and quality property development by Avida.</p>
-          <a href="" target="_blank">View Listing</a>
+        {/* Skills Section */}
+        <div className="skills mb-5">
+          <h2 className="sub-title">Real Estate Expertise</h2>
+          <ul className="list-unstyled mt-3">
+            <li>Residential & Commercial Property Sales</li>
+            <li>Investment Consulting</li>
+            <li>Sales and Marketing Strategies</li>
+            <li>Negotiation & Contract Handling</li>
+          </ul>
         </div>
-      </section>
 
-      {/* Contact */}
-      <footer>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:liaalmidaclemente@gmail.com">liaalmidaclemente@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/lia-almida-clemente-116690142/" target="_blank">linkedin.com/in/lia-almida-clemente-116690142/</a></p>
-      </footer>
-    </div>
+        {/* Properties / Projects */}
+        <div className="projects mb-5">
+          <h2 className="sub-title">Featured Properties</h2>
+
+          <div className="row justify-content-center mt-4">
+            <div className="col-md-4 mb-4">
+              <div className="portfolio-card h-100 text-center shadow">
+                <h4>Metro Manila Residential Condo</h4>
+                <p>Spacious 3-bedroom, 2-bath condo located in a prime area with modern amenities.</p>
+                <a href="#" className="btn btn-primary mt-2" target="_blank" rel="noopener noreferrer">View Listing</a>
+              </div>
+            </div>
+
+            <div className="col-md-4 mb-4">
+              <div className="portfolio-card h-100 text-center shadow">
+                <h4>House and Lot by Avida</h4>
+                <p>Affordable, high-quality property development perfect for families and investors.</p>
+                <a href="#" className="btn btn-primary mt-2" target="_blank" rel="noopener noreferrer">View Listing</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Resume Section */}
+        <div className="resume mt-5">
+          <a href="../assets/Resume.pdf" className="btn btn-outline-dark" target="_blank" rel="noopener noreferrer">Download Resume</a>
+        </div>
+
+      </div>
+    </section>
   );
 };
 

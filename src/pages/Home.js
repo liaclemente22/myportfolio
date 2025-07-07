@@ -1,52 +1,50 @@
 import { Link } from "react-router-dom";
-import "./Home.css"; 
+import "./Home.css";
+import Hero from "../components/Hero";
+import AboutMe from "../components/AboutMe";
+import FeaturedProjects from "../components/FeaturedProjects";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
     <div className="home">
+
       {/* Hero Section */}
-      <header className="hero">
-        <h1>Lia Almida Clemente</h1>
-        <p>IT Service Desk | Web Development | Real Estate</p>
-      </header>
+      <section className="hero-section">
+        <Hero />
+      </section>
 
-      {/* Role Selection Section */}
-      <section className="roles">
-        <h2>Explore My Work</h2>
-        <div className="role-buttons">
-          <Link to="/it-support" className="role-btn">IT Support Portfolio</Link>
-          <Link to="/web-dev" className="role-btn">Web Developer Portfolio</Link>
-          <Link to="/real-estate" className="role-btn">Real Estate Portfolio</Link>
+      {/* About Me Section */}
+      <section className="about-section container text-center my-5">
+        <AboutMe />
+      </section>
 
+      {/* Portfolio Section */}
+      <section className="portfolio-section container my-5">
+        <h2 className="section-title text-center mb-4">Featured Projects</h2>
+        <FeaturedProjects />
+      </section>
+
+      {/* Additional Projects */}
+      <section className="additional-projects container text-center my-5">
+        <h2 className="section-title mb-4">Additional Projects</h2>
+        <div className="d-flex justify-content-center flex-wrap">
+          <a
+            href="https://lifeandchances.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-outline-primary m-2"
+          >
+            WordPress Website Project
+          </a>
         </div>
       </section>
 
+     
+      <Contact />
+      <Footer />
 
-    <section className="other">
-      <h2>Other Work Explorations</h2>
-      <div className="role-buttons">
-       <a href="https://lifeandchances.com/" target="_blank" rel="noopener noreferrer" className="role-btn">WordPress Web Development Creation</a>
-       </div>
-      </section>
-
-
-      {/* About Section */}
-      <section className="about">
-        <h2>About Me</h2>
-        <p>
-          With 10 years of experience in IT Service Desk, technical support, and real estate, 
-          I am now transitioning into Full Stack Web Development. Passionate about problem-solving, 
-          automation, and technology-driven solutions.
-        </p>
-      </section>
-
-      {/* Contact Section */}
-      <section className="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:liaalmidaclemente@gmail.com" rel="noopener noreferrer" target="_blank">liaalmidaclemente@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/liaclemente22/" rel="noopener noreferrer" target="_blank">github.com/liaclemente22</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/lia-almida-clemente-116690142/" rel="noopener noreferrer" target="_blank">linkedin.com/in/lia-almida-clemente</a></p>
-      </section>
     </div>
   );
 };

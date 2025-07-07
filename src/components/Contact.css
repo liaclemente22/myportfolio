@@ -1,0 +1,12 @@
+.contact-section h2 {
+  font-weight: 600;
+}
+
+.contact-section a.btn {
+  min-width: 160px;
+}
+
+.contact-section p.text-muted {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}

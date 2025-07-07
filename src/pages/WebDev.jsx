@@ -1,49 +1,92 @@
-import "../components/Portfolio.css";
+import { useNavigate } from "react-router-dom";
+import "./WebDev.css";
 
 const WebDev = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="portfolio">
-      <h1>Web Development Portfolio</h1>
-      <p>Full Stack Web Developer | React | Node.js | MongoDB | Express</p>
+    <section className="it-support-section position-relative">
 
-      {/* Skills Section */}
-      <section className="skills">
-        <h2>Skills & Technologies</h2>
-        <ul>
-          <li>React.js, Next.js</li>
-          <li>Node.js, Express, MongoDB</li>
-          <li>REST APIs, GraphQL</li>
-          <li>JWT Authentication</li>
-          <li>HTML, CSS, JavaScript</li>
-          <li>Git, Docker, CI/CD</li>
-        </ul>
-      </section>
+      {/* Back Button - Top Left */}
+      <button 
+        className="btn btn-outline-secondary back-btn" 
+        onClick={() => navigate(-1)} >
+        ← Back
+      </button>
 
-      {/* Projects Section */}
-      <section className="projects">
-        <h2>Web Development Projects</h2>
-        <div className="project">
-          <h3>Airline Web App</h3>
-          <p>Mabuhay Airlines is a full stack airline booking web application that allows users to search for flights, book tickets, apply promo fares, and manage bookings. The frontend is built with React.js and Bootstrap, while the backend uses Node.js, Express, and MongoDB. </p>
-          <p><em>Role:</em> Project Collaborator</p>
-          <a href="https://mabuhay-airlines-fs.vercel.app/" target="_blank">View Project</a>
+      <div className="container text-center">
+        
+        {/* Header Section */}
+        <div className="header mb-5">
+          <h1 className="section-title">Web Development Portfolio</h1>
+          <p className="lead">Full Stack Developer | React | Node.js | MongoDB | Express</p>
+          <a href="mailto:liaalmidaclemente@gmail.com" className="btn btn-outline-primary mt-3">Contact Me</a>
         </div>
 
-        <div className="project">
-          <h3>E-Commerce Platform</h3>
-          <p>This is a full stack e-commerce web application developed as a capstone project during the Zuitt Coding Bootcamp. It features user authentication, product catalog browsing, cart management, and admin controls for product and order management. The frontend was built using HTML, CSS, and JavaScript, while the backend was developed using Node.js, Express, and MongoDB.</p>
-          <p><em>Role:</em> Backend Development Partner</p>
-          <a href="http://zuitt-bootcamp-prod-521-8370-clemente.s3-website.us-east-1.amazonaws.com/" target="_blank">View Project</a>
-        </div>
-      </section>
+        {/* Skills Section */}
+        <div className="skills mb-5">
+  <h2 className="sub-title">Skills & Technologies</h2>
 
-      {/* Contact */}
-      <footer>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:liaalmidaclemente@gmail.com">liaalmidaclemente@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/liaclemente22/" target="_blank">github.com/liaclemente22/</a></p>
-      </footer>
+  <div className="d-flex justify-content-center">
+    <ul className="list-unstyled text-start" style={{ maxWidth: "600px" }}>
+      <li><strong>Frontend:</strong> React.js, Next.js, HTML, CSS, JavaScript, TailwindCSS</li>
+      <li><strong>Backend:</strong> Node.js, Express.js, Typescript</li>
+      <li><strong>Database:</strong> MongoDB, NoSQL, MySQL (Basic)</li>
+      <li><strong>API:</strong> REST APIs, GraphQL</li>
+      <li><strong>Authentication:</strong> JWT (JSON Web Token)</li>
+      <li><strong>Other Tools:</strong> Git, Docker, CI/CD</li>
+      <li><strong>Additional:</strong> Python (Basic)</li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+        {/* Projects Section */}
+        <section className="projects mb-5">
+  <h2 className="sub-title">Web Development Projects</h2>
+
+  <div className="row justify-content-center mt-4">
+    
+    <div className="col-md-4 mb-4">
+      <div className="portfolio-card h-100 text-center shadow">
+        <h4>Airline Web App</h4>
+        <p>Mabuhay Airlines is a full stack airline booking application with search, booking, and promo features. Built with React, Node.js, Express, and MongoDB.</p>
+        <p><em>Role:</em> Project Collaborator</p>
+        <a href="https://mabuhay-airlines-fs.vercel.app/" target="_blank" className="btn btn-primary mt-2">View Project</a>
+      </div>
     </div>
+
+    <div className="col-md-4 mb-4">
+      <div className="portfolio-card h-100 text-center shadow">
+        <h4>E-Commerce Platform</h4>
+        <p>Full stack e-commerce site from Zuitt Bootcamp with authentication, product management, and order processing. Uses HTML, CSS, JavaScript, Node.js, Express, and MongoDB.</p>
+        <p><em>Role:</em> Backend Development Partner</p>
+        <a href="http://zuitt-bootcamp-prod-521-8370-clemente.s3-website.us-east-1.amazonaws.com/" target="_blank" className="btn btn-primary mt-2">View Project</a>
+      </div>
+    </div>
+
+    <div className="col-md-4 mb-4">
+      <div className="portfolio-card h-100 text-center shadow">
+        <h4>EduHub - Educational Platform</h4>
+        <p>Interactive educational platform built with HTML, CSS, and Bootstrap for learning resources and student engagement.</p>
+        <p><em>Role:</em> Solo Project</p>
+        <a href="https://liaclemente22.github.io/Eduhub/" target="_blank" className="btn btn-primary mt-2">View Project</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+        {/* Contact Section */}
+        <div className="resume mt-5">
+          <a href="../assets/Resume.pdf" className="btn btn-outline-dark" target="_blank" rel="noopener noreferrer">Download Resume</a>
+        </div>
+
+      </div>
+    </section>
   );
 };
 

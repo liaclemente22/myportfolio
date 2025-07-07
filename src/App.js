@@ -7,6 +7,9 @@ import RealEstate from "./pages/RealEstate";
 import Blog from "./pages/Blog";
 import BlogList from "./components/BlogList";
 import AutomatedReset from './components/AutomatedReset';
+import Portfolio from "./pages/Portfolio";
+
+
 
 function App() {
   return (
@@ -14,6 +17,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/it-support" element={<ITSupport />} />
         <Route path="/web-dev" element={<WebDev />} />
         <Route path="/real-estate" element={<RealEstate />} />

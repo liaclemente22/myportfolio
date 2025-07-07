@@ -1,0 +1,25 @@
+.featuredprojects {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+}
+
+.featuredprojects h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+  border-radius: 50px;
+  padding: 8px 20px;
+}

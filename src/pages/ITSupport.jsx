@@ -1,59 +1,82 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "../components/ITSupport.css"; // Custom CSS for IT Support
+import { Link, useNavigate } from "react-router-dom";
+import "./ITSupport.css"; 
 
 const ITSupport = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="it-support-container">
-      {/* Header Section */}
-      <header className="it-support-header">
-        <h1>Lia Almida Clemente</h1>
-        <p>IT Service Desk | Technical Support | Automation</p>
-        <div className="contact-info">
-          <a href="mailto:liaalmidaclemente@gmail.com">liaalmidaclemente@gmail.com</a>
-        </div>
-      </header>
+    <section className="it-support-section position-relative">
+      
+      {/* Back Button positioned absolute top-left */}
+      <button 
+        className="btn btn-outline-secondary back-btn" 
+        onClick={() => navigate(-1)}
+      >
+        ← Back
+      </button>
 
-      {/* Skills Section */}
-      <section className="it-support-skills">
-        <h2>Skills & Tools</h2>
-        <ul>
-          <li>Windows, macOS, Linux (Basic)</li>
-          <li>Active Directory, ADSP, Office 365, EAC</li>
-          <li>Networking (TCP/IP, VPN, DHCP)</li>
-          <li>PowerShell, Bash, Oracle SQL Developer </li>
-          <li>ServiceNow, Jira, Confluence</li>
-          <li>Remote Support Tools (SCCM, Bomgar, RDP, Citrix, VDI, VMWare, FileZilla, Putty)</li>
-          <li>SentinelOne (EDR/XDR)</li>
-          <li>AirWatch (MDM)</li>
-        </ul>
-      </section>
+      <div className="container text-center">
 
-      {/* Projects Section */}
-      <section className="it-support-projects">
-        <h2>Projects</h2>
-        <div className="project">
-          <h3>IT Service Management Blogs</h3>
-          {/* Updated Link */}
-          <Link to="/it-support/blogs/67ef3e119a58b38fac63cf5b">View Blog</Link>
+        {/* Header Section */}
+        <div className="header mb-5">
+          <h1 className="section-title">IT Support Portfolio</h1>
+          <p className="lead">IT Service Desk | Technical Support | Automation | Troubleshooting</p>
+          <a href="mailto:liaalmidaclemente@gmail.com" className="btn btn-outline-primary mt-3">Contact Me</a>
         </div>
-        <div className="project">
-          <h3>Automated Password Reset Script</h3>
-          <p>PowerShell script that resets Active Directory passwords.</p>
-          <Link to="/it-support/automated-password-reset">View Code</Link>
-        </div>
-        <div className="project">
-          <h3>Network Troubleshooting Guide</h3>
-          <p>A structured guide to troubleshooting network issues.</p>
-          <a href="../assets/My network troubleshooting.pdf">Download PDF</a>
-        </div>
-      </section>
 
-      {/* Resume Section */}
-      <section className="it-support-resume">
-        <a href="../assets/Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
-      </section>
-    </div>
+        {/* Skills Section */}
+        <div className="skills mb-5">
+          <h2 className="sub-title">Skills & Tools</h2>
+          <ul className="list-unstyled mt-3">
+            <li>Windows, macOS (Basic), Linux (Basic)</li>
+            <li>Active Directory, ADSP, Office 365, EAC</li>
+            <li>Networking (TCP/IP, VPN, DHCP)</li>
+            <li>PowerShell, Bash, Oracle SQL Developer</li>
+            <li>ServiceNow, Jira, Confluence</li>
+            <li>Remote Support Tools (SCCM, Bomgar, RDP, Citrix, VDI, VMWare)</li>
+            <li>SentinelOne (EDR/XDR), AirWatch (MDM)</li>
+          </ul>
+        </div>
+
+        {/* Projects Section */}
+        <div className="projects mb-5">
+          <h2 className="sub-title">Projects</h2>
+
+          <div className="row justify-content-center mt-4">
+            <div className="col-md-4 mb-4">
+              <div className="portfolio-card h-100 text-center shadow">
+                <h4>IT Service Management Blogs</h4>
+                <p>Insights and articles on ITSM best practices and troubleshooting.</p>
+                <Link to="/it-support/blogs/67ef3e119a58b38fac63cf5b" className="btn btn-primary mt-2">View Blog</Link>
+              </div>
+            </div>
+
+            <div className="col-md-4 mb-4">
+              <div className="portfolio-card h-100 text-center shadow">
+                <h4>Automated Password Reset Script</h4>
+                <p>PowerShell script to automate secure password resets in Active Directory.</p>
+                <Link to="/it-support/automated-password-reset" className="btn btn-primary mt-2">View Code</Link>
+              </div>
+            </div>
+
+            <div className="col-md-4 mb-4">
+              <div className="portfolio-card h-100 text-center shadow">
+                <h4>Network Troubleshooting Guide</h4>
+                <p>Step-by-step guide to resolving common network issues effectively.</p>
+                <a href="../assets/My network troubleshooting.pdf" className="btn btn-primary mt-2" target="_blank" rel="noopener noreferrer">Download PDF</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Resume Section */}
+        <div className="resume mt-5">
+          <a href="../assets/Resume.pdf" className="btn btn-outline-dark" target="_blank" rel="noopener noreferrer">Download Resume</a>
+        </div>
+
+      </div>
+    </section>
   );
 };
 
