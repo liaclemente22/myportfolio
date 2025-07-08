@@ -71,7 +71,16 @@ const Navbar = () => {
                 </li>
 
             <li className="nav-item mx-2">
-              <RouterLink to="/contact" className="nav-link">Contact</RouterLink>
+                  <ScrollLink
+                    to="contact"
+                    smooth={true}
+                    duration={500}
+                    offset={-70}
+                    className="nav-link"
+                  >
+                    Contact
+                  </ScrollLink>
+
             </li>
 
           </ul>
