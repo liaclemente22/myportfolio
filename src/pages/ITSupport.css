@@ -1,9 +1,11 @@
 .it-support-section {
   padding: 60px 20px;
-  background: linear-gradient(to bottom right, #e8f0fe, #ffffff); /* Light professional gradient */
+  background: linear-gradient(to bottom right, #e8f0fe, #ffffff);
   min-height: 100vh;
+  position: relative;
 }
 
+/* Typography */
 .section-title {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
@@ -24,6 +26,26 @@
   color: #555;
 }
 
+/* Back Button */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1px solid #6c757d;
+  background: transparent;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+/* Skills Section */
 .skills ul {
   list-style: none;
   padding: 0;
@@ -37,6 +59,38 @@
   font-size: 1rem;
 }
 
+/* Accordion Section */
+.responsibilities {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.accordion-button {
+  font-weight: 600;
+  background-color: #f8f9fa;
+  color: #212529;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e2e6ea;
+  color: #000;
+}
+
+.accordion-body ul {
+  padding-left: 1.2rem;
+  list-style-type: disc;
+  line-height: 1.6;
+  margin-bottom: 0;
+  color: #495057;
+  font-size: 1rem;
+}
+
+/* Projects */
 .portfolio-card {
   background: #fff;
   border-radius: 15px;
@@ -61,41 +115,36 @@
   color: #555;
 }
 
-.btn-primary, .btn-outline-dark, .btn-outline-primary {
+/* Buttons */
+.btn-primary,
+.btn-outline-dark,
+.btn-outline-primary {
   min-width: 160px;
   padding: 10px 20px;
   border-radius: 50px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.btn-primary:hover, .btn-outline-dark:hover, .btn-outline-primary:hover {
+.btn-primary:hover,
+.btn-outline-dark:hover,
+.btn-outline-primary:hover {
   transform: scale(1.05);
 }
 
+/* Resume Section */
 .resume {
   margin-top: 40px;
 }
 
 
-.it-support-section {
-  position: relative;
-  padding: 40px 20px;
+.skills-list {
+  max-width: 700px;
+  padding-left: 0;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
 }
 
-.back-btn {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 100;
-  padding: 8px 16px;
-  border-radius: 50px;
-  border: 1px solid #6c757d;
-  background: transparent;
-  color: #6c757d;
-  transition: all 0.3s ease;
-}
-
-.back-btn:hover {
-  background-color: #6c757d;
-  color: #fff;
+.skills-list li {
+  margin-bottom: 10px;
 }
