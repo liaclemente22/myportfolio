@@ -55,7 +55,7 @@ const ITSupport = () => {
               <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#responsibilitiesAccordion">
                 <div className="accordion-body">
                   <ul>
-                    <li>Provided L1 technical support for Windows, macOS, and Linux systems, including desktops, printers, network, and email (O365, Lotus Notes).</li>
+                    <li>Provided L1 technical support for Windows, macOS, and Linux systems, including desktops, printers, network, and email (O365).</li>
                     <li>Resolved issues with antivirus, encryption, backup, SCCM, and admin tools.</li>
                     <li>Handled tickets via ServiceNow; performed triage and escalations.</li>
                     <li>Delivered remote support using WebEx, VNC, and RDP.</li>
