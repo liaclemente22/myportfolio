@@ -25,7 +25,7 @@ const Home = () => {
         <FeaturedProjects />
       </section>
 
-      {/* Additional Projects */}
+       {/* Additional Projects */}
       <section className="additional-projects container text-center my-5">
         <h2 className="section-title mb-4">Additional Projects</h2>
         <div className="d-flex justify-content-center flex-wrap">
@@ -35,10 +35,19 @@ const Home = () => {
             rel="noopener noreferrer"
             className="btn btn-outline-primary m-2"
           >
-            WordPress Website Project
+            Life & Chances – WordPress Site
+          </a>
+          <a
+            href="https://classicbicycles1349.wordpress.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-outline-secondary m-2"
+          >
+            Classic Bicycles – WordPress Site
           </a>
         </div>
       </section>
+
 
      
       <Contact />
