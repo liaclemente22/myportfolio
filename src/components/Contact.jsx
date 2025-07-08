@@ -2,7 +2,7 @@ import "./Contact.css";
 
 const ContactSection = () => {
   return (
-    <section className="contact-section bg-light py-5">
+    <section id= "contact" className="contact-section bg-light py-5">
       <div className="container text-center">
         <h2 className="mb-4">Let's Connect</h2>
         <p className="mb-3">I'm open to new opportunities, collaborations, and networking.</p>

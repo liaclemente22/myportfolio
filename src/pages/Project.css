@@ -1,0 +1,23 @@
+.projects-page h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.projects-page .btn {
+  min-width: 120px;
+  transition: all 0.2s ease-in-out;
+}
+
+.projects-page .btn:hover {
+  transform: translateY(-2px);
+}
+
+.card {
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}

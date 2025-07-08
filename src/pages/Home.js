@@ -10,10 +10,9 @@ const Home = () => {
   return (
     <div className="home">
 
-      {/* Hero Section */}
-      <section className="hero-section">
+     
         <Hero />
-      </section>
+      
 
       {/* About Me Section */}
       <section className="about-section container text-center my-5">

@@ -38,3 +38,12 @@
   background-color: #0d6efd;
   color: #fff;
 }
+
+.image-blob-bg {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at center, #ffffff40, #00bcd420);
+  border-radius: 50% 40% 60% 70% / 60% 30% 70% 40%;
+  z-index: 0;
+}

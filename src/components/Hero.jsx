@@ -1,29 +1,51 @@
-import "./Hero.css";
+import React, { useState, useEffect } from "react";
+import './Hero.css';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    document.body.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+  };
+
   return (
     <section className="hero-section">
-      <div className="container-fluid px-5">
-        <div className="row align-items-center justify-content-center">
+      <div className="theme-toggle">
+        <button onClick={toggleTheme}>
+          {theme === 'light' ? ' Dark Mode' : ' Light Mode'}
+        </button>
+      </div>
 
-          {/* Text Column */}
-          <div className="col-lg-6 col-md-7 text-center text-lg-start">
-            <h1 className="hero-title">Hi, I'm Lia Almida Clemente</h1>
-            <p className="hero-subtitle">IT Service Desk | Web Development | Real Estate</p>
-
-            <div className="hero-buttons mt-4">
-              <a href="/portfolio" className="btn btn-primary hero-btn me-3">Explore My Portfolio</a>
-              <a href="#contact" className="btn btn-outline-dark hero-btn">Let's Connect</a>
-            </div>
+      <div className="hero-row">
+        <div className="image-column">
+          <div className="hero-image-wrapper">
+            <div className="blob-background"></div>
+            <img
+              src="/images/profile1.png"
+              alt="Lia Almida Clemente"
+              className="hero-image-plain"
+            />
           </div>
+        </div>
 
-          {/* Image Column with background wrapper */}
-          <div className="col-lg-5 col-md-5 text-center mt-4 mt-lg-0">
-            <div className="hero-image-wrapper mx-auto">
-              <img src="/images/profile1.png" alt="Lia Almida Clemente" className="img-fluid hero-image" />
-            </div>
+        <div className="hero-column text-column">
+          <h1 className="hero-title">Hi, I'm Lia Almida Clemente</h1>
+        <p className="hero-subtitle">
+  Eager learner and aspiring Full-Stack Developer, blending creativity with code to craft responsive websites and grow through real-world tech challenges.
+</p>
+
+
+          <div className="hero-buttons">
+            <a href="/portfolio" className="btn btn-primary hero-btn">Explore My Portfolio</a>
+            <Link to="contact" smooth={true} duration={500} className="btn btn-outline-dark hero-btn">
+  Let's Connect </Link>
+
           </div>
-
         </div>
       </div>
     </section>
