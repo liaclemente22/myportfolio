@@ -1,0 +1,25 @@
+.contact {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #f0f4ff, #ffffff);
+  min-height: 100vh;
+}
+
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-details {
+  font-size: 1rem;
+  color: #495057;
+  text-align: center;
+}
+
+.contact-details a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}

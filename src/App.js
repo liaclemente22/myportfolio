@@ -8,6 +8,7 @@ import Blog from "./pages/Blog";
 import BlogList from "./components/BlogList";
 import AutomatedReset from './components/AutomatedReset';
 import Portfolio from "./pages/Portfolio";
+import ContactPage from "./pages/ContactPage";
 
 
 
@@ -23,6 +24,8 @@ function App() {
         <Route path="/real-estate" element={<RealEstate />} />
         <Route path="/it-support/blogs/:id" element={<Blog />} />  {/* Dynamic route */}
         <Route path="/blog/get-all" element={<BlogList />} />
+        <Route path="/contact" element={<ContactPage />} />
+
 
 
         <Route path="it-support/automated-password-reset" element={<AutomatedReset />} />

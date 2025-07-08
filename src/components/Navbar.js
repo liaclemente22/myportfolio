@@ -2,13 +2,14 @@ import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import "./Navbar.css";
 
+
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav className="navbar navbar-expand-lg sticky-top">
       <div className="container-fluid">
 
         {/* Brand aligned hard left */}
-        <RouterLink className="navbar-brand ms-3" to="/">Lia Almida Clemente</RouterLink>
+        <RouterLink className="navbar-brand ms-3" to="/">Lia Clemente</RouterLink>
 
         <button
           className="navbar-toggler"
@@ -70,18 +71,10 @@ const Navbar = () => {
                   </ul>
                 </li>
 
-            <li className="nav-item mx-2">
-                  <ScrollLink
-                    to="contact"
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
-                    className="nav-link"
-                  >
-                    Contact
-                  </ScrollLink>
+                <li className="nav-item">
+                  <RouterLink className="nav-link" to="/contact">Contact</RouterLink>
+                </li>
 
-            </li>
 
           </ul>
         </div>

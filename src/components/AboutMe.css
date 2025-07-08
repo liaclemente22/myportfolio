@@ -8,12 +8,14 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
+  text-align: center;
 }
 
 .about-content h2 {
   font-size: 2.4rem;
   font-weight: 700;
   color: #212529;
+  margin-bottom: 30px;
 }
 
 .about-content p {
@@ -31,4 +33,36 @@
   .about-content p {
     font-size: 1rem;
   }
+}
+
+
+/* === Language, Skills, and Interests Section === */
+.info-section h5 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 15px;
+}
+
+.info-section ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.info-section li {
+  font-size: 1.05rem;
+  color: #495057;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 18px;
+}
+
+.info-section li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0d6efd; /* Bootstrap primary color */
+  font-size: 1.2rem;
+  line-height: 1;
 }
