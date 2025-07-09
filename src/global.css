@@ -21,6 +21,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+.palette-bg {
+  background: linear-gradient(135deg, #f6f1f1, #e0f7fa, #e6f0ff);
+  color: #333;
+}
+
+/* === Utility Section Padding (optional if not using Tailwind for these) === */
+.section {
+  padding: 60px 20px;
+}
+
+/* === Optional: Improve Visual Flow Between Sections === */
+.section + .section {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* === Enhance Container Consistency === */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* === Optional: Heading Contrast on Palette Background === */
+.palette-bg .section-title,
+.palette-bg p,
+.palette-bg .card-title {
+  color: #1a1a1a;
+}
+
+
+/*.palette-bg {
+  background: linear-gradient(135deg, #f6f1f1, #e0f7fa, #e6f0ff);
+  color: #333;
+}
+*/
+
 /* ===== Section Containers ===== */
 .container {
   max-width: 900px;
@@ -196,10 +232,82 @@ img {
 }
 
 
-.connect-section {
-  background-color: #f8f9fa;
-  padding: 60px 20px;
+/* === Pill-Shaped Buttons with Brand Colors === */
+.btn-palette {
+  background-color: #0d6efd;         /* Primary blue */
+  color: #fff;
+  border: none;
+  border-radius: 9999px;             /* Fully rounded */
+  padding: 10px 24px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(13, 110, 253, 0.15);
 }
+
+.btn-palette:hover {
+  background-color: #025ce2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(13, 110, 253, 0.25);
+}
+
+/* Optional: Adjust icon size inside buttons */
+.btn-palette svg {
+  font-size: 1.1rem;
+}
+
+
+
+.btn-primary-custom {
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  background-color: #0b5ed7;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}
+
+.btn-secondary-custom {
+  background-color: #f1f3f5;
+  color: #212529;
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary-custom:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-outline-custom {
+  background-color: #fff;
+  color: #0d6efd;
+  border: 2px solid #0d6efd;
+  border-radius: 9999px;
+  padding: 10px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+}
+
 
 
 .footer {
@@ -219,3 +327,5 @@ img {
 .footer a:hover {
   color: #ffffff;
 }
+
+

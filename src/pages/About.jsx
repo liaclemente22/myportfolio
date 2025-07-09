@@ -1,4 +1,4 @@
-import '../global.css'; // or your specific CSS
+import '../global.css'; 
 import AboutMe from "../components/AboutMe";
 
 const About = () => {
