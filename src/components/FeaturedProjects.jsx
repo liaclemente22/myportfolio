@@ -1,6 +1,27 @@
 import { Link } from "react-router-dom";
 import { FaTools, FaCode, FaBuilding } from "react-icons/fa";
-import "../global.css"; // make sure this path matches your structure
+import "../global.css";
+
+const projects = [
+  {
+    icon: <FaTools size={40} />,
+    title: "IT Support Solutions",
+    description: "Remote troubleshooting, ticket management, and helpdesk tools.",
+    to: "/it-support",
+  },
+  {
+    icon: <FaCode size={40} />,
+    title: "Web Development Projects",
+    description: "Modern, responsive websites built with React, HTML, and CSS.",
+    to: "/web-dev",
+  },
+  {
+    icon: <FaBuilding size={40} />,
+    title: "Real Estate Tools",
+    description: "Property management platforms for real estate listings.",
+    to: "/real-estate",
+  },
+];
 
 const FeaturedProjects = () => {
   return (
@@ -10,68 +31,24 @@ const FeaturedProjects = () => {
           <h2 className="section-title mb-4">Featured Projects</h2>
 
           <div className="row g-4">
-            {/* IT Support Solutions */}
-            <div className="col-lg-4 col-md-6">
-              <Link
-                to="/it-support"
-                className="project-link text-decoration-none text-dark"
-              >
-                <div className="card h-100 shadow text-center">
-                  <div className="card-body">
-                    <h5 className="card-title">
-                      <FaTools className="me-2" />
-                      IT Support Solutions
-                    </h5>
-                    <p className="card-text">
-                      Remote troubleshooting, ticket management, and helpdesk tools.
-                    </p>
-                    <span className="btn btn-primary mt-2">Explore</span>
+            {projects.map((proj, index) => (
+              <div className="col-lg-4 col-md-6" key={index}>
+                <Link to={proj.to} className="text-decoration-none text-dark">
+                  <div className="card h-100 shadow-sm border-0 hover-shadow transition">
+                    <div className="card-body d-flex flex-column align-items-center text-center">
+                      <div className="icon-box bg-light rounded-circle p-3 mb-3 text-primary">
+                        {proj.icon}
+                      </div>
+                      <h5 className="card-title fw-semibold">{proj.title}</h5>
+                      <p className="card-text">{proj.description}</p>
+                      <div className="mt-auto">
+                        <span className="btn btn-primary">Explore</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </div>
-
-            {/* Web Development Projects */}
-            <div className="col-lg-4 col-md-6">
-              <Link
-                to="/web-dev"
-                className="project-link text-decoration-none text-dark"
-              >
-                <div className="card h-100 shadow text-center">
-                  <div className="card-body">
-                    <h5 className="card-title">
-                      <FaCode className="me-2" />
-                      Web Development Projects
-                    </h5>
-                    <p className="card-text">
-                      Modern, responsive websites built with React, HTML, and CSS.
-                    </p>
-                    <span className="btn btn-primary mt-2">Explore</span>
-                  </div>
-                </div>
-              </Link>
-            </div>
-
-            {/* Real Estate Tools */}
-            <div className="col-lg-4 col-md-6">
-              <Link
-                to="/real-estate"
-                className="project-link text-decoration-none text-dark"
-              >
-                <div className="card h-100 shadow text-center">
-                  <div className="card-body">
-                    <h5 className="card-title">
-                      <FaBuilding className="me-2" />
-                      Real Estate Tools
-                    </h5>
-                    <p className="card-text">
-                      Property management platforms for real estate listings.
-                    </p>
-                    <span className="btn btn-primary mt-2">Explore</span>
-                  </div>
-                </div>
-              </Link>
-            </div>
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>

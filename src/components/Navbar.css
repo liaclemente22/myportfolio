@@ -33,14 +33,7 @@
   border: none;
 }
 
-.dropdown-item {
-  color: #212529;
-}
 
-.dropdown-item:hover {
-  background-color: #f8f9fa;
-  color: #0d6efd;
-}
 
 /* Toggler for Mobile */
 .navbar-toggler {
@@ -64,8 +57,32 @@
   opacity: 1 !important;
 }
 
+.dropdown-item {
+  color: #212529; /* Bootstrap default dark text */
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #0d6efd;
+}
+
 
 
 .navbar-toggler {
   z-index: 1100;
+}
+
+
+
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu.show {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }

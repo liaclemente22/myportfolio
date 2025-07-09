@@ -1,80 +1,72 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../global.css";
 
-const Blog = () => {
-  const { id } = useParams();
-  const [blog, setBlog] = useState(null);
+const Blogs = () => {
+  const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const apiUrl = process.env.REACT_APP_API_URL;
+  const apiUrl = process.env.REACT_APP_API_URL;
 
-    fetch(`${apiUrl}/blogs/${id}`)
+  useEffect(() => {
+    fetch(`${apiUrl}/blogs`)
       .then((res) => res.json())
       .then((data) => {
-        if (data) {
-          setBlog(data);
-        } else {
-          setError("Blog not found");
-        }
+        setBlogs(data);
         setLoading(false);
       })
-      .catch((error) => {
-        setError("Error fetching blog");
+      .catch((err) => {
+        setError("Failed to fetch blogs");
         setLoading(false);
       });
-  }, [id]);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
+  }, [apiUrl]);
 
   return (
-    <section className="blog-section py-5">
+    <section className="blog-list-section py-5">
       <div className="container">
-        <button
-          className="btn btn-outline-secondary mb-4"
-          onClick={() => window.history.back()}
-        >
-          ← Back to Blogs
-        </button>
+        <h1 className="section-title text-center mb-5">Latest Blog Posts</h1>
 
-        <div className="blog-wrapper p-4 shadow-sm bg-white rounded">
-          <h1 className="section-title text-center mb-4">{blog.title}</h1>
+        {loading && <p className="text-center">Loading blogs...</p>}
+        {error && <p className="text-danger text-center">{error}</p>}
 
-          {blog.image && (
-            <img
-              src={`${process.env.REACT_APP_API_URL}/${blog.image.replace(/^\//, '')}`}
-              alt={blog.title}
-              className="img-fluid rounded mb-4"
-              style={{ width: "100%", maxHeight: "400px", objectFit: "cover" }}
-              onError={(e) => {
-                console.log("Image failed to load:", e.target.src);
-                if (e.target.src !== "/fallback.jpg") {
-                  e.target.src = "/fallback.jpg";
-                }
-              }}
-            />
+        <div className="row">
+          {blogs.length > 0 ? (
+            blogs.map((blog) => (
+              <div className="col-md-6 col-lg-4 mb-4" key={blog._id}>
+                <div className="card shadow-sm h-100">
+                  {blog.image && (
+                    <img
+                      src={`${apiUrl}/${blog.image.replace(/^\//, '')}`}
+                      className="card-img-top"
+                      alt={blog.title}
+                      onError={(e) => {
+                        e.target.src = "/fallback.jpg";
+                      }}
+                    />
+                  )}
+                  <div className="card-body d-flex flex-column">
+                    <h5 className="card-title">{blog.title}</h5>
+                    <p className="card-text text-muted">
+                      {blog.content.replace(/<[^>]+>/g, "").slice(0, 100)}...
+                    </p>
+                    <Link
+                      to={`/blogs/${blog._id}`}
+                      className="btn btn-outline-primary mt-auto"
+                    >
+                      Read More
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))
+          ) : (
+            !loading && <p className="text-center">No blog posts available.</p>
           )}
-
-          <div
-            className="blog-content"
-            dangerouslySetInnerHTML={{ __html: blog.content }}
-          />
-
-          <div className="d-flex justify-content-center gap-3 mt-4">
-            <span className="badge bg-primary">{blog.category}</span>
-            <span
-              className={`badge ${blog.isPublished ? 'bg-success' : 'bg-secondary'}`}
-            >
-              {blog.isPublished ? "Published" : "Unpublished"}
-            </span>
-          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default Blog;
+export default Blogs;

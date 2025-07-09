@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container">
         <p>&copy; {new Date().getFullYear()} Lia Almida Clemente. All rights reserved.</p>
         <p>
-          Built with <span>React</span> & <span>Bootstrap</span>
+          Built with React & Bootstrap
         </p>
       </div>
     </footer>

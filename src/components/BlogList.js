@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./BlogList.css";
+import "../global.css";
 
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const apiUrl = process.env.REACT_APP_API_URL;
@@ -15,35 +16,45 @@ const BlogList = () => {
         setBlogs(data);
         setLoading(false);
       })
-      .catch((err) => {
-        console.error("Error fetching blog list:", err);
+      .catch(() => {
+        setError("Failed to load blogs.");
         setLoading(false);
       });
   }, []);
 
-  if (loading) return <p className="text-center">Loading blogs...</p>;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p className="text-danger">{error}</p>;
 
   return (
-    <section className="bloglist-section py-5">
+    <section className="py-5 blog-list-section">
       <div className="container">
-        <h2 className="section-title text-center mb-5">Blog Posts</h2>
+        <h1 className="section-title mb-4 text-center">Latest Blog Posts</h1>
 
         <div className="row">
           {blogs.map((blog) => (
-            <div className="col-md-6 mb-4" key={blog._id}>
-              <div className="card h-100 shadow">
+            <div key={blog._id} className="col-md-6 mb-4">
+              <div className="card shadow-sm h-100">
                 {blog.image && (
                   <img
                     src={`${process.env.REACT_APP_API_URL}/${blog.image.replace(/^\//, '')}`}
                     alt={blog.title}
                     className="card-img-top"
-                    style={{ height: "220px", objectFit: "cover" }}
+                    onError={(e) => {
+                      e.target.src = "/fallback.jpg";
+                    }}
                   />
                 )}
-                <div className="card-body">
+                <div className="card-body d-flex flex-column">
                   <h5 className="card-title">{blog.title}</h5>
-                  <p className="card-text">{blog.content.slice(0, 100)}...</p>
-                  <Link to={`/blog/${blog._id}`} className="btn btn-primary">Read More</Link>
+                  <p className="card-text text-muted">
+                    {blog.content.replace(/<[^>]+>/g, '').slice(0, 120)}...
+                  </p>
+                  <div className="mt-auto">
+                    <span className="badge bg-primary me-2">{blog.category}</span>
+                    <Link to={`/blogs/${blog._id}`} className="btn btn-sm btn-outline-primary mt-2">
+                      Read More →
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

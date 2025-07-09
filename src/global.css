@@ -5,9 +5,10 @@
 
 /* ===== Base Styles ===== */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif, Arial;
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+
+
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
@@ -20,20 +21,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-/* ===== Typography ===== */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  color: #212529;
+/* ===== Section Containers ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
 }
 
+/* ===== Global Heading Styles ===== */
 .section-title {
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  text-align: center;
-  margin-bottom: 20px;
+  font-size: clamp(2rem, 5vw, 2.6rem);
+  font-weight: 700;
+  color: #212529;
   position: relative;
+  margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 
+/* Optional: Add underline bar under each title */
 .section-title::after {
   content: "";
   display: block;
@@ -43,6 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px auto 0;
 }
 
+/* Sub-Section Titles */
 .sub-title {
   font-size: 1.5rem;
   font-weight: 600;
@@ -50,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
+/* ===== Typography ===== */
 p, li {
   font-size: 1.05rem;
   line-height: 1.6;
@@ -65,16 +75,6 @@ ul {
   padding-left: 1.2rem;
 }
 
-/* ===== Containers ===== */
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  background: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
-}
-
 /* ===== Buttons ===== */
 .btn {
   border-radius: 9999px;
@@ -87,14 +87,14 @@ ul {
   transform: scale(1.05);
 }
 
-/* ===== Images ===== */
+/* ===== Image Defaults ===== */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* ===== Utilities ===== */
+/* ===== Utility Alignment ===== */
 .text-center {
   text-align: center;
 }
@@ -103,7 +103,7 @@ img {
   text-align: left;
 }
 
-/* ===== Cards ===== */
+/* ===== Responsive Cards (if needed globally) ===== */
 .card {
   border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -114,17 +114,16 @@ img {
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
 }
 
-.card-title {
-  font-size: 1.3rem;
-  font-weight: 600;
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 700;
   color: #212529;
-  letter-spacing: 0.5px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* ===== Sections ===== */
-.about-section,
-.featuredprojects,
-.connect-section {
+.about-section {
   background-color: #f8f9fa;
   padding: 60px 20px;
 }
@@ -148,6 +147,23 @@ img {
   margin-bottom: 10px;
 }
 
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #212529;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+}
+
+
+.featuredprojects {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+}
+
+
+
 .card-text {
   font-size: 1rem;
   color: #555;
@@ -162,28 +178,39 @@ img {
   background-color: #fff;
 }
 
-.blog-wrapper {
-  background: #fff;
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+.icon-box {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.lead-content {
-  font-size: 1.1rem;
-  color: #495057;
+.hover-shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== Footer ===== */
+.transition {
+  transition: all 0.3s ease;
+}
+
+
+.connect-section {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+}
+
+
 .footer {
   font-size: 0.95rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: #212529;
-  color: #ccc;
-  padding: 2rem 0;
 }
 
-.footer small,
+.footer small {
+  color: #ccc;
+}
+
 .footer a {
   color: #ccc;
   transition: color 0.2s ease-in-out;

@@ -1,5 +1,4 @@
 import { Link as RouterLink } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "./Navbar.css";
 
@@ -24,20 +23,17 @@ const Navbar = () => {
         </button>
 
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul className="navbar-nav me-3">
+          <ul className="navbar-nav d-flex align-items-center gap-3">
 
-            {/* About Link (scroll) */}
-            <li className="nav-item mx-2">
-              <RouterLink className="nav-link" to="/about">
-                About
-              </RouterLink>
+            <li className="nav-item">
+              <RouterLink className="nav-link" to="/about">About</RouterLink>
             </li>
 
             {/* Projects Dropdown */}
-            <li className="nav-item dropdown mx-2">
+            <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle"
                 href="#"
+                className="nav-link dropdown-toggle"
                 id="projectsDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -54,11 +50,12 @@ const Navbar = () => {
               </ul>
             </li>
 
-            {/* Contact */}
-            <li className="nav-item mx-2">
-              <RouterLink className="nav-link" to="/contact">
-                Contact
-              </RouterLink>
+            <li className="nav-item">
+              <RouterLink className="nav-link" to="/blogs">Blogs</RouterLink>
+            </li>
+
+            <li className="nav-item">
+              <RouterLink className="nav-link" to="/contact">Contact</RouterLink>
             </li>
 
           </ul>
