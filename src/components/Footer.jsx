@@ -1,9 +1,13 @@
+import './Footer.css';
+
 const Footer = () => {
   return (
-    <footer className="footer bg-dark text-light text-center py-3">
+    <footer className="footer">
       <div className="container">
-        <p className="mb-1">&copy; {new Date().getFullYear()} Lia Almida Clemente. All rights reserved.</p>
-        <small className="text-muted">Portfolio designed with React & Bootstrap</small>
+        <p>&copy; {new Date().getFullYear()} Lia Almida Clemente. All rights reserved.</p>
+        <p>
+          Built with <span>React</span> & <span>Bootstrap</span>
+        </p>
       </div>
     </footer>
   );
