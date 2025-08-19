@@ -7,20 +7,8 @@ const AboutMe = () => {
         <h2 className="section-title mb-4">About Me</h2>
 
         <p className="lead mb-4">
-          I'm Lia Almida Clemente — a tech-driven professional with over 10 years of experience 
-          in IT Service Desk, technical support, and real estate services.
+         Hi, I’m Lia 👋 For over 7 years, I’ve been the go-to person for solving tech hiccups and keeping systems running smoothly. Along the way, I discovered a love for web development — the creative side of tech that lets me bring ideas to life. Today, I’m blending the patience and problem-solving of IT support with the creativity of coding, while continuously learning and exploring. My dream is to build something meaningful for people to use, combining my passion for helping others with my passion for creating through technology.
         </p>
-
-        <p>
-          Currently pivoting into Full Stack Web Development, I specialize in building efficient, responsive tools that solve real-world problems. I'm passionate about exploring automation, streamlining complex workflows, and creating intuitive, user-friendly platforms.
-        </p>
-
-        <p>
-          My background blends IT Support, customer service, and a growing expertise in modern web technologies — 
-          allowing me to deliver solutions that bridge technology and business needs.
-        </p>
-
-
       </div>
     </section>
   );
