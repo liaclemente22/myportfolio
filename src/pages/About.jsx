@@ -25,9 +25,13 @@ const About = () => {
             <div className="col-md-4 mb-4">
               <h5 className="info-title">Skills</h5>
               <ul className="list-unstyled">
-                <li>• Full Stack Web Development (React, Node.js, MongoDB)</li>
-                <li>• IT Support (Windows, macOS, O365, Active Directory)</li>
-                <li>• Cloud & Virtualization (VMware, basic Azure/AWS)</li>
+                <li>• Frontend: HTML, CSS, JavaScript (ES6+), React.js</li>
+                <li>• Backend: Node.js, Express.js, REST APIs</li>
+                <li>• Databases: MySQL, MongoDB, Oracle SQL</li>
+                <li>• IT Support: Windows, macOS, O365, Active Directory, PC break/fix</li>
+                <li>• Cloud & Admin: Microsoft 365 Admin, Intune (MDM), Basic Azure AD</li>
+                <li>• Security & Ops: Endpoint security, DNS/DHCP troubleshooting, server monitoring (PuTTY)</li>
+                <li>• Tools: Git/GitHub, ServiceNow, Jira, Postman</li>
               </ul>
             </div>
 
