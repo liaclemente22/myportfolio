@@ -94,7 +94,7 @@ const WebDev = () => {
             </div>
 
 
-            {/* Jermon Artist Website */}
+         
             <div className="col-md-4 mb-4">
               <div className="portfolio-card h-100 text-center shadow">
                 <h4>Frontend Figma Translation</h4>
