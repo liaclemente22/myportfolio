@@ -98,7 +98,7 @@ const WebDev = () => {
             <div className="col-md-4 mb-4">
               <div className="portfolio-card h-100 text-center shadow">
                 <h4>Frontend Figma Translation</h4>
-                <p>A pixel-perfect website built by translating a Figma design into a fully responsive frontend layout. Focused on clean structure, accurate spacing, and consistent styling using HTML, CSS, and Bootstrap.</p>
+                <p>A website built by translating a Figma design into a  frontend layout. Focused on clean structure, accurate spacing, and consistent styling using HTML, CSS, and Bootstrap.</p>
                 <p><em>Role:</em> Solo Developer</p>
                 <a href="https://liaclemente22.github.io/figma-to-frontend-website/" target="_blank" className="btn btn-primary mt-2">View Project</a>
               </div>
